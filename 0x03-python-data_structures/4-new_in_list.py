@@ -5,5 +5,5 @@ def new_in_list(my_list, idx, element):
             return my_list
         else:
             duplicate_list = my_list.copy()
-            duplicate_list[idx] = number
+            duplicate_list[idx] = element
             return duplicate_list
