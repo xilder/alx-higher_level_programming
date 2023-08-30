@@ -14,4 +14,9 @@ print("--")
 my_square_3 = Square(3, (3, 0))
 my_square_3.my_print()
 
+my_square_5 = Square(3, (3, 0, 1))
+my_square_5.my_print()
+
+my_square_6 = Square(3, ['H', 0])
+my_square_6.my_print()
 print("--")
