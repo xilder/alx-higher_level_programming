@@ -14,6 +14,9 @@ class Square:
         self.size = size
         self.position = position
 
+    def __str__(self):
+        return self.pos_print()[:-1]
+
     @property
     def size(self):
         """"The propery of size as the len of a side of Square
