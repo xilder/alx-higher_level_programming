@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 """adds elements to a list and stores them is json string"""
-import sys, json, os
+import sys
+import json
+import os
 
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
