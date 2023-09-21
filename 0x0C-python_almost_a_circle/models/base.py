@@ -65,7 +65,7 @@ class Base:
     def load_from_file(cls):
         """returns a list of classes from a file of json string"""
 
-        filename = cls.__name__ + "json"
+        filename = cls.__name__ + ".json"
         try:
             with open(filename, "r", encoding="UTF-8") as f:
                 instances = Base.from_json_string(f.read())
@@ -77,7 +77,7 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """saves a list of a class' instances to a csv file"""
 
-        filename = cls.__name__ + "json"
+        filename = cls.__name__ + ".csv"
         with open(filename, "w", encoding="UTF-8") as f:
             if list_objs is None or list_objs == []:
                 f.write("[]")
