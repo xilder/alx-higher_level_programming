@@ -1,4 +1,4 @@
--- lists all Comedy shows in the database hbtn_0d_tvshows.
+-- lists all genres in the database hbtn_0d_tvshows not linked to Dexter.
 
 SELECT tv_genres.name
 FROM tv_genres
