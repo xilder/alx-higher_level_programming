@@ -3,11 +3,15 @@
 const num = parseInt(process.argv[2]);
 let total = 1;
 
-if (num && num > 0) {
-  for (let i = 1; i <= num; i++) {
-    total *= i;
+function factorial(number) {
+  if (number === 0) {
+    return 1;
   }
-  console.log(total);
+  return number * factorial(number - 1)
+}
+
+if (num) {
+  console.log(factorial(num));
 } else {
   console.log(1);
 }
