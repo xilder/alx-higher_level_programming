@@ -9,11 +9,12 @@ if (arr.length <= 3) {
   console.log(0);
 } else {
   for (let i = 2; i < arr.length; i++) {
-    if (arr[i] > first) {
+    arr[i] = parseInt(arr[i]);
+    if (arr[i] && arr[i] > first) {
       second = first;
       first = arr[i];
     }
-    if (arr[i] > second && arr[i] < first) {
+    if (arr[i] && arr[i] > second && arr[i] < first) {
       second = arr[i];
     }
   }
