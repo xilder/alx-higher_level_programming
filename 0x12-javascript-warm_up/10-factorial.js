@@ -3,7 +3,7 @@
 const num = parseInt(process.argv[2]);
 let total = 1;
 
-if (num) {
+if (num && num > 0) {
   for (let i = 1; i <= num; i++) {
     total *= i;
   }
