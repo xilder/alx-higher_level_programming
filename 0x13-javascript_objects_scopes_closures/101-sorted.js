@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const dict = require('./101-data.js').dict;
 
-const newDict = {}
+const newDict = {};
 const values = Object.entries(dict);
 
 values.forEach(([key, value]) => {
