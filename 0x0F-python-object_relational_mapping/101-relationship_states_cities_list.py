@@ -23,10 +23,11 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = State(name='California')
-    city = City(name='San Francisco')
-    state.cities.append(city)
+    states = session.query(State).all()
 
-    session.add(state)
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("\t{}: {}".format(city.id, city.name))
     session.commit()
     session.close()
