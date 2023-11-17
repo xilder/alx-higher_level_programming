@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 """
-lists all State objects, and corresponding City objects,
-contained in the database hbtn_0e_101_usa
+lists all City objects from the database hbtn_0e_101_usa
 """
 
 from sys import argv
@@ -19,11 +18,12 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).all()
+    cities = session.query(City, State).filter(City.state_id == State.id)\
+        .all()
 
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
-        for city in state.cities:
-            print("\t{}: {}".format(city.id, city.name))
+    for city, state in cities:
+        print("{}: {} -> {}".format(city.id, city.name, state.name))
+
+    session.add(state)
     session.commit()
     session.close()
