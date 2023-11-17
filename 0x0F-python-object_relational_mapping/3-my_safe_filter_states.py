@@ -23,4 +23,4 @@ if __name__ == '__main__':
     row_states = cursor.fetchall()
 
     for state in row_states:
-        print(statc)
+        print(state)
