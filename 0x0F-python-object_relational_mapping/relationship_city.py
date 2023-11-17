@@ -3,7 +3,7 @@
 City class defined by the SQLalchemy module
 """
 
-from model_state import Base, State
+from relationship_state import Base, State
 from sqlalchemy import ForeignKey, Column, Integer, String
 
 
