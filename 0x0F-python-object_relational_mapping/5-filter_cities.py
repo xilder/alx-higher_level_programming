@@ -19,9 +19,7 @@ if __name__ == '__main__':
             FROM cities\
             JOIN states ON cities.state_id = states.id\
             WHERE states.name = %(name)s\
-            ORDER BY cities.id ASC',
-            {'name': argv[4]}
-            )
+            ORDER BY cities.id ASC', {'name': argv[4]})
     row_cities = cursor.fetchall()
 
     if row_cities is not None:

@@ -15,11 +15,11 @@ if __name__ == '__main__':
             db=argv[3]
             )
     cursor = db.cursor()
-    cursor.execute('SELECT * FROM states\
-                    WHERE name = %(name)s\
-                    ORDER BY name ASC',
-                    {'name': argv[4]}
-                  )
+    cursor.execute(
+        'SELECT * FROM states\
+                WHERE name = %(name)s\
+                ORDER BY name ASC', {'name': argv[4]}
+                )
     row_states = cursor.fetchall()
 
     for state in row_states:
